@@ -1,74 +1,28 @@
 <img align="right" src="https://github.com/woa-vayu/src_vayu_windows/blob/main/2Poco X3 Pro Windows.png" width="350" alt="Windows 11 Running On A Poco X3 Pro">
 
-
 # Running Windows on the POCO X3 Pro
 
 ## Updating Drivers
 
 ### Prerequisites
-- [Recovery image](https://github.com/woa-vayu-archive/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries)
+- [Drivers](https://github.com/woa-vayu-archive/Port-Windows-11-POCO-X3-Pro/releases/tag/Drivers)
 
-- [UEFI image](https://github.com/woa-vayu/msmnilePkg/releases/latest)
+### Boot into Windows
+> Flash the UEFI image in fastboot or use the WOA Helper app
 
-- [Drivers](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
+### Installing Drivers
+> Unpack the driver archive on beryllium, then open the `OnlineUpdater.cmd` file
 
-### Boot into TWRP
-> If your recovery has been replaced by the stock recovery, flash it again using
-```cmd
-fastboot flash recovery <recovery.img> reboot recovery
-```
+> Follow any instructions provided on the screen
 
-#### Activate mass storage mode
-> If it asks you to run it once again, do so
-```cmd
-adb shell msc
-```
+> If you see an error after installing **App Packages**, ignore it, and reboot your device manually after it says **Done!**
 
-### Diskpart
-```cmd
-diskpart
-```
-
-#### Select the Windows volume of the tablet
-> Use `list volume` to find it, it's the one named **WINVAYU**
-```diskpart
-select volume <number>
-```
-
-#### Assign the letter X
-```diskpart
-assign letter x
-```
-
-#### Exit diskpart
-```diskpart
-exit
-```
-
-### Check what type of panel you have
-> Open cmd
-```cmd
-adb shell panel
-```
-
-### Installing drivers
-Unpack the Drivers archive you've downloaded earlier and run the `OfflineUpdater_<paneltype>.cmd` script
-> When it asks you for the drive letter, enter **X**
-  
-### Reboot to fastboot to flash UEFI
-> You can also use the WOA Helper app, in which case you can reboot with ```adb reboot```
->
-> Make sure you use the latest UEFI, because Windows might not boot if you update drivers without updating the UEFI
-```cmd
-adb reboot bootloader
-```
-
-#### Boot with Windows bootable UEFI image
-> Replace <uefi.img> with the actual path of the UEFI image
-```cmd
-fastboot flash boot <uefi.img>
-```
 ## Finished!
+
+
+
+
+
 
 
 
