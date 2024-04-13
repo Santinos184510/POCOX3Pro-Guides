@@ -10,7 +10,7 @@
 ### Prerequisites
 - [ARM Windows esd](https://worproject.com/esd) (Select - Version:  ```11``` Build:  ```22631.2861``` Architecture:  ```ARM64``` Edition:  ```CLIENT``` Language:  ```select your language```)
     
-- [Drivers](https://github.com/woa-vayu/Vayu-Drivers/releases/latest)
+- [Drivers](https://github.com/woa-vayu-archive/Port-Windows-11-POCO-X3-Pro/releases/tag/Drivers)
 
 - [Recovery image](https://github.com/woa-vayu-archive/Port-Windows-11-POCO-X3-Pro/releases/tag/Recoveries) (should already be installed)
 
